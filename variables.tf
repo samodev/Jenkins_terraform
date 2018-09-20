@@ -32,7 +32,7 @@ variable "publicIP5" {}
 variable "public_ip_address_allocation_name5" {}
 variable "NetworkInterface5" {}
 variable "NicConfiguration5" {}
-variable NetworkSecurityGroup5 {}
+variable "NetworkSecurityGroup5" {}
 variable "name_virtual_machine5" {}
 variable "storage_disk5" {}
 
