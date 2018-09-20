@@ -1,8 +1,11 @@
 
-  subscription_id= "49d2709f-3abb-47e9-abb6-ce0c26be47f2"
-  client_id= "d1fef633-a370-4822-bc5c-0dc2ba41d41c"
-  client_secret= "62381b0e-f22b-45fd-8525-4ec06cc32867"
-  tenant_id= "edfa0b8b-916d-4bb7-aab9-4db7fb09786a"
+  subscription_id = "483e3fb6-7be5-4715-b41c-f1f8f7d2dd2a"
+client_id       = "e3ba3d8e-c9d2-48ce-bdb2-e655da0873c4"
+client_secret   = "264d6bd5-b0d5-483f-ac27-181d124428a4"
+tenant_id       = "e5af66ec-c0ee-41b6-bc79-e7470d8a1d16"
+ssh_keys_data   = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDHfYmi4iacSVl5PDtAkNYHLmOq5BKy76Og16siX6JztyjUYlCsKg+i+3sY/BTeishgQ9pLyo9zIWutVTafUqfL/IELt8/sSTpviAnfxXo6D2/xFOy1SwKsSuuTabl9LDVAE4mLX9DzPECeTJXf1XZ+8YtHvcZ8jjPt/bVFxB3v08rOVe/uRDtb+yVawI2OO1XoMEPIZ2699ZpVi8N4ujo1FVR8M1+T2DKAcup4Q1Oka7a5nvS3UVQfVIQYPJ1u3HXTSVhiDy1SMv/HHhhxWzKyZfQfefnNrNZs/ZsFUWRGemgEhjLfzhTrtrceyIZY4WE+Y+Oz+SSBnZIE70TA/s5da5hM6cCU12pWpMAsvXz21ClonMcZXWhCswanuat/5xl3g4q6BrFE+QBLmnman7YUe1MzoCgH/g5zEDxDTg7rPFfR9UYywCnT4cC9dHYFahZma3+ZI9L6+7tPHbsVvy8QLKtmnVjRnxRwDSCLV2AmLHQne0Cgzep5Hxq+vDh/aNnVKukp0rcxCyC6GqRUxzq14tEOMLTOXSL+JftxHafuPNnPcTU1C/m8maxtrXCYw10FAu2ZwSTRjOH2bvQf6Fo9B1NSkK0HeM0V8nyRVcPvqNcHuAZqt8n32NEhlZP4EZkGIEKwJWAbzspftS3sGogaMyAXf7TWVY+kJkKH/BeXWw== samodev1725@gmail.com"
+ssh_keys_path   = "/home/stage/.ssh/authorized_keys"
+
   nom_resource= "RG_Formation"
   network_name= "myVnet"
   subnet= "mySubnet"
