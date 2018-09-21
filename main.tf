@@ -133,15 +133,15 @@ resource "azurerm_virtual_machine" "myterraformvm1" {
 
     os_profile {
         computer_name  = "myvm1${count.index}"
-        admin_username = "azureuser"
+        admin_username = "stage"
     }
 
 
     os_profile_linux_config {
         disable_password_authentication = true
         ssh_keys {
-            path     = "/home/azureuser/.ssh/authorized_keys"
-            key_data = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCuCTfAFjUJspUxmfT16TN8vYHTbxaSNz2ipSRFlF8GopYk76krvGLWFVmFZ9DPdX9Xgj6G9TCfqE0WGx/Me/3TESwpPMIf47en7tDfgrCDWMtnDv6uZkdBlQ4NaNS+PZJ4HvsETDOEzP3ea7Kwoy3VI5f8wSzxycdxCle/q1NfxrzFMiHazCOMUG/znMYoJEM2yyP/1lMxO1LXN3hpjGZNxFC9JtDmTmDRc706qtBfzwy5m3HbfdRAU65o3XgxjW/4nTm7vBnVT2/5VwPkhaAlL+QiJ0+zOrOsEUSyY/dO82yohVV7DpaS648usunEyPn5RKwqC7uZfDQJxkwH9wX root@CentOs.formation"
+            path     = "${var.ssh_keys_path}"
+            key_data = "${var.ssh_keys_data}"
         }
     }
 
@@ -201,6 +201,18 @@ resource "azurerm_network_security_group" "myterraformnsg5" {
 
     tags {
         environment = "${var.environment_name5}"
+    }
+
+    security_rule {
+        name                       = "${var.security_rule}"
+        priority                   = 1001
+        direction                  = "Inbound"
+        access                     = "Allow"
+        protocol                   = "Tcp"
+        source_port_range          = "*"
+        destination_port_range     = "22"
+        source_address_prefix      = "*"
+        destination_address_prefix = "*"
     }
 
 }
@@ -273,15 +285,15 @@ resource "azurerm_virtual_machine" "myterraformvm5" {
 
     os_profile {
         computer_name  = "myvm5"
-        admin_username = "azureuser"
+        admin_username = "stage"
     }
 
 
     os_profile_linux_config {
         disable_password_authentication = true
         ssh_keys {
-            path     = "/home/azureuser/.ssh/authorized_keys"
-            key_data = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCuCTfAFjUJspUxmfT16TN8vYHTbxaSNz2ipSRFlF8GopYk76krvGLWFVmFZ9DPdX9Xgj6G9TCfqE0WGx/Me/3TESwpPMIf47en7tDfgrCDWMtnDv6uZkdBlQ4NaNS+PZJ4HvsETDOEzP3ea7Kwoy3VI5f8wSzxycdxCle/q1NfxrzFMiHazCOMUG/znMYoJEM2yyP/1lMxO1LXN3hpjGZNxFC9JtDmTmDRc706qtBfzwy5m3HbfdRAU65o3XgxjW/4nTm7vBnVT2/5VwPkhaAlL+QiJ0+zOrOsEUSyY/dO82yohVV7DpaS648usunEyPn5RKwqC7uZfDQJxkwH9wX root@CentOs.formation"
+            path     = "${var.ssh_keys_path}"
+            key_data = "${var.ssh_keys_data}"
         }
     }
 

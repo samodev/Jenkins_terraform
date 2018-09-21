@@ -3,6 +3,8 @@ variable "subscription_id" {}
 variable "client_id" {}
 variable "client_secret" {}
 variable "tenant_id" {}
+variable "ssh_keys_data" {}
+variable "ssh_keys_path" {}
 variable "nom_resource" {}
 variable "network_name" {}
 variable "subnet" {}
